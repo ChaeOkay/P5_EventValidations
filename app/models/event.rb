@@ -1,8 +1,9 @@
 class Event < ActiveRecord::Base
-  validates_presence_of :date
   validates :title, uniqueness: true, presence: true
+  validates_presence_of :date
+  validate :future_date
 
-  def date_valid
+  def future_valid
     #date is in the future
   end
 
