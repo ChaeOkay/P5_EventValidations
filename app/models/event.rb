@@ -10,6 +10,6 @@ end
 class Event < ActiveRecord::Base
   include ActiveModel::Validations
   validates :title, uniqueness: true, presence: true
-  validates_presence_of :date, :organizer_name, :organizer_email
+  validates_presence_of :date, :name, :semail
   validates_with MyValidator
 end

@@ -4,6 +4,6 @@ require 'faker'
   Event.create({
     :date => Date.today + i,
     :title => "Event #{i}",
-    :organizer_name => "Organizer #{i}",
-    :organizer_email => "organizer_#{i}@example.com" })
+    :name => "Organizer #{i}",
+    :email => "organizer_#{i}@example.com" })
 end
