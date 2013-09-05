@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  $('.datepicker').datepicker();
+
   // send an HTTP DELETE request for the sign-out link
   $('a#sign-out').on("click", function (e) {
     e.preventDefault();

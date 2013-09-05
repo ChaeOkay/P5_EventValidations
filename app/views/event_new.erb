@@ -1,15 +1,25 @@
+<% if @errormsg %>
+  <p><%= @errormsg %></p>
+<% end %>
+
 <div class='container'>
   <form name='new_event' action='/events/create' method='post'>
-    <label>Title</label></br>
-    <input name='title' type='text' placeholder="e.x. Event 1"></br>
+    <label>Event Title</label>
+    <input name='title' type='text' placeholder="e.x. Event 1">
+    <span><%= "#{flash[:email]}" %></span>
+    </br>
 
-    <label>Date</label></br>
-    <input name='date' type='date'></br>
+<!--     <div class="input-append date" id="dp3" data-date-format="dd-mm-yyyy">
+        <label>Event Date</label>
+        <input name='date'  type='text' placeholder="12-02-2012"><span class="add-on"><i class="icon-th"></i></span>
+    </div> -->
 
-    <label>Organizer Name</label></br>
-    <input name='organizer_name' type='organizer_name' placeholder='Your Name'></br>
+<input type="text" value="02-16-2012" class="datepicker">
 
-    <label>Organizer's Email</label></br>
+    <label>Organizer Name</label>
+    <input name='organizer_name' type='text' placeholder='Your Name'></br>
+
+    <label>Organizer's Email</label>
     <input name='organizer_email' type='email' placeholder='your@email.com'></br>
 
     <input type='submit' value='Create Event'></br>

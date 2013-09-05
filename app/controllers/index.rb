@@ -1,9 +1,6 @@
 
-
 get '/' do
   @events = Event.all
-  flash[:blah] = "something"
-  "flashmessage #{flash[:blah]}"
   erb :index
 end
 
@@ -13,10 +10,17 @@ get '/events/:id/show' do |id|
 end
 
 get '/events/new' do
+  @errormsg = "Show: #{flash[:blah]}"
   erb :event_new
 end
 
 post '/events/create' do
-  @user = User.create(params)
-  redirect '/'
+  @event = Event.create(params)
+  create_flash(@event)
+  flash[:email] = "flash email"
+  # unless @event
+    # create_flash()
+    #key=> keyerror
+    # flash[:blah] =
+    redirect '/events/new'
 end
