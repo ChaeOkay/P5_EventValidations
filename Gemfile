@@ -18,6 +18,7 @@ gem 'bcrypt-ruby'
 gem 'shotgun'
 
 gem 'sinatra-flash'
+gem 'pry'
 
 group :development, :test do
   gem 'faker'
