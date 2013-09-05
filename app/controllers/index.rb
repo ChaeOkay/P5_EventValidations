@@ -16,5 +16,6 @@ end
 post '/events/create' do
   @event = Event.create(params)
   create_flash(@event)
+  redirect '/' if @event.save
   redirect '/events/new'
 end
