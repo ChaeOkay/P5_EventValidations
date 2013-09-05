@@ -1,21 +1,20 @@
-<% if @errormsg %>
-  <p><%= @errormsg %></p>
-<% end %>
-
 <div class='container'>
   <form name='new_event' action='/events/create' method='post'>
     <label>Event Title</label>
     <input name='title' type='text' placeholder="e.x. Event 1">
-    <span><%= "#{flash[:email]}" %></span>
+    <span><%= "#{flash[:title]}" %></span>
 
     <label>Event Date</label>
     <input name='date' type="text" placeholder="<%= format_date(Date.today) %>" class="datepicker">
+    <span><%= "#{flash[:date]}" %></span>
 
     <label>Organizer Name</label>
     <input name='organizer_name' type='text' placeholder='Your Name'>
+    <span><%= "#{flash[:organizer_name]}" %></span>
 
     <label>Organizer's Email</label>
     <input name='organizer_email' type='email' placeholder='your@email.com'>
+    <span><%= "#{flash[:organizer_email]}" %></span>
     <br>
 
     <input type='submit' value='Create Event'>

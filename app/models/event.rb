@@ -1,8 +1,8 @@
 class MyValidator < ActiveModel::Validator
   def validate(event)
     binding.pry
-    if (event.date <= Date.today)
-      event.errors[:date] << "Error identified"
+    if ( event.date && event.date <= Date.today )
+      event.errors[:date] << "must be in the future"
     end
   end
 end
@@ -10,6 +10,6 @@ end
 class Event < ActiveRecord::Base
   include ActiveModel::Validations
   validates :title, uniqueness: true, presence: true
-  validates_presence_of :date
+  validates_presence_of :date, :organizer_name, :organizer_email
   validates_with MyValidator
 end

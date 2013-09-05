@@ -1,7 +1,10 @@
 $(document).ready(function () {
 
   //New Event - Datepicker
-  $('.datepicker').datepicker();
+  $('.datepicker').datepicker({
+    format: 'dd-mm-yyyy'
+    //format for AR validation check agains Date.today
+  });
 
   // send an HTTP DELETE request for the sign-out link
   $('a#sign-out').on("click", function (e) {

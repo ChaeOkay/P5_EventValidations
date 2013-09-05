@@ -10,7 +10,6 @@ get '/events/:id/show' do |id|
 end
 
 get '/events/new' do
-  @errormsg = "Show: #{flash[:blah]}"
   erb :event_new
 end
 
