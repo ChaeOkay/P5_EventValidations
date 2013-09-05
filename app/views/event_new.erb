@@ -9,7 +9,7 @@
     <span><%= "#{flash[:email]}" %></span>
 
     <label>Event Date</label>
-    <input type="text" placeholder="12/25/2018" class="datepicker">
+    <input type="text" placeholder="<%= Date.today.strftime("%m/%d/%Y") %>" class="datepicker">
 
     <label>Organizer Name</label>
     <input name='organizer_name' type='text' placeholder='Your Name'>
