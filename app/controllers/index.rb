@@ -1,5 +1,9 @@
+
+
 get '/' do
   @events = Event.all
+  flash[:blah] = "something"
+  "flashmessage #{flash[:blah]}"
   erb :index
 end
 

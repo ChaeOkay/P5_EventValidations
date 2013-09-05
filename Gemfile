@@ -18,7 +18,6 @@ gem 'bcrypt-ruby'
 gem 'shotgun'
 
 gem 'sinatra-flash'
-gem 'sinatra-redirect-with-flash'
 
 group :development, :test do
   gem 'faker'
