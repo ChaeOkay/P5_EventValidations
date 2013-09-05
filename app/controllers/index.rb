@@ -18,10 +18,5 @@ require 'pry'
 post '/events/create' do
   @event = Event.create(params)
   create_flash(@event)
-  flash[:email] = "flash email"
-  # unless @event
-    # create_flash()
-    #key=> keyerror
-    # flash[:blah] =
-    redirect '/events/new'
+  redirect '/events/new'
 end

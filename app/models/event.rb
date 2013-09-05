@@ -1,5 +1,6 @@
 class MyValidator < ActiveModel::Validator
   def validate(event)
+    binding.pry
     if (event.date <= Date.today)
       event.errors[:date] << "Error identified"
     end
