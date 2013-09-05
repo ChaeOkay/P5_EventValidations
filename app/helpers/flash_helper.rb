@@ -8,7 +8,6 @@ helpers do
         end
       flash[key] = msg
     end
-    binding.pry
   end
 
 end

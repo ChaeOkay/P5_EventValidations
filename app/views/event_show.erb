@@ -1,4 +1,4 @@
-<h2><%=@event.organizer_name%> Invites YOU to <%=@event.title%> on
-  <%=@event.date%></h2>
-<p>RSVP to <a href="mailto:
-  <%=@event.email%>"><%=@event.email%></a></p>
+<h2><%= @event.title %></h2>
+<h4><%= @event.date.strftime("%A %d %B %y") %></h4>
+<p>Organized by: <%= @event.name %> at <a href="mailto
+  <%=@event.email%>"><%= @event.email %></a></p>
